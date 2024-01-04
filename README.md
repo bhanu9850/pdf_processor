@@ -18,7 +18,7 @@ PyPDF library
 
 
 Clone the repository:
-git clone https://github.com//pdf-processor.git
+git clone https://github.com/bhanu9850/pdf_processor.git
 
 Navigate to the project directory:
 cd pdf-processor
