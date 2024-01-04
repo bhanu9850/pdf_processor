@@ -1,0 +1,97 @@
+/* Reset some default browser styles */
+body, h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the font family and background color for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Add some padding and a border around the header */
+header {
+    background-color: #8c9baa;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the main content area */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Style the operations section */
+.operations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 15px;
+    width: calc(20% - 30px); /* Adjust card width as needed */
+}
+
+.card h3 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #8c9baa;
+    border-top: 1px solid #ddd;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .operations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Adjust width for better fit on small screens */
+        margin: 10px 0;
+    }
+}

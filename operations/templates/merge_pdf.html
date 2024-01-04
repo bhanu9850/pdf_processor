@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge PDFs</title>
+    <style>
+        body {
+            font-family: sans-serif; /* Use a more readable font */
+            margin: 40px auto; /* Add some spacing around the content */
+            max-width: 600px; /* Set a maximum width for better readability */
+          }
+          
+          h1 {
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+          }
+          
+          form {
+            border: 1px solid #ccc; /* Add a border to visually define the form area */
+            padding: 20px; /* Add padding inside the form */
+            border-radius: 5px; /* Slightly round the corners */
+          }
+          
+          label {
+            display: block; /* Display labels on their own lines */
+            margin-bottom: 5px; /* Add space below labels */
+          }
+          
+          input[type="file"] {
+            padding: 10px; /* Add some padding to the file input */
+            border: 1px solid #ccc; /* Give it a border */
+            border-radius: 5px; /* Round its corners */
+          }
+          
+          button {
+            background-color: #4CAF50; /* Green background for emphasis */
+            color: white; /* White text on the button */
+            padding: 10px 20px; /* Add padding to the button */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Round its corners */
+            cursor: pointer; /* Give a pointer cursor on hover */
+          }
+          
+          button:hover {
+            background-color: #3e8e41; /* Slightly darker green on hover */
+          }
+          button a{
+            color:white
+          }
+</style>
+</head>
+<body>
+    <h1>Merge PDFs</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="pdf_files">Select PDF files to merge:</label><br>
+        <input type="file" name="pdf_files" multiple required><br><br>
+        <button type="submit">Merge PDFs</button>
+        <button><a href="/">Back to Home</a></button>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Word to PDF</title>
+    <link rel="stylesheet" href='/static/css/styles.css'>
+    <style>
+        button {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            background-color: #e6e8ea;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            margin-left: 100px;
+            
+        }
+        button a{
+            text-decoration:none;
+        }
+        button:hover {
+            background-color: #c7d2da;
+        }
+        button[type="submit"]{
+            margin:0px
+
+        }
+        
+        </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Convert Word to PDF</h2>
+    <form action="{% url 'word_to_pdf' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="docx_file">Upload DOCX file:</label>
+        <input type="file" name="docx_file" required>
+        <button type="submit">Upload</button>
+        <button><a href="/">Back to Home</a></button>
+    </form>
+</div>
+
+</body>
+</html>
